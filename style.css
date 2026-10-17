@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+:root{
+    --fundo: #0f172a;
+    --destaque: #3b82f6;
+    --texto: #f1f5f9;
+
+}
+
+body{
+    background-color: var(--fundo);
+    color: var(--texto);
+}
+
+header{
+    padding: 10px 10px 50px 25px;
+
+}
+
+header  span{
+    color: var(--destaque);
+}
