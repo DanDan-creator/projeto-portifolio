@@ -5,23 +5,95 @@
     margin: 0px;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 :root{
     --fundo: #0f172a;
     --destaque: #3b82f6;
     --texto: #f1f5f9;
+    --fonte:"Lato", sans-serif;
 
 }
 
-body{
+html, body{
+    min-width: 100vh;
+    min-height: 100vh;
+    font-family: var(--fonte);
+    color:var(--texto);
     background-color: var(--fundo);
-    color: var(--texto);
 }
 
 header{
-    padding: 10px 10px 50px 25px;
+    position: fixed;
+    top: 0;
+    background: rgba(12, 18, 33, 0.8);
+}
+
+nav  span{
+    color: var(--destaque);
+}
+
+.navegacao{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background: rgba(22, 36, 72, 0.345);
+    width: 100%;
+    z-index: 100;
+    padding: 0.6rem;
+}
+
+.logo{
+    font-size: 2em;
+    font-weight: bolder;
+    text-shadow: 0.5px 0.5px 3px rgba(0, 0, 0, 0.555);
+}
+
+.menu{
+    display: flex;
+    justify-content:right;
+    margin: 0px 50px;
+    list-style: none;
+    gap: 3rem;
 
 }
 
-header  span{
+.menu-link{
+    color: var(--texto);
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+.menu-link::after{
+    content: '';
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, var(--destaque), var(--fundo));
+    transition: width 0.3s ease;
+}
+
+.menu-link:hover::after{
+    width: 100%;
+}
+
+section{
+    min-width: 96vh;
+    padding: 8rem;
+}
+
+.imagem{
+    background-image: linear-gradient(90deg, rgba(10, 18, 35, 0.9), rgba(10, 18, 35, 0.237)), url(imagens/notebook-codigo.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.cabecalho{
     color: var(--destaque);
+    font-size: bold
 }
