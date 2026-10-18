@@ -11,6 +11,7 @@
     --fundo: #0f172a;
     --destaque: #3b82f6;
     --texto: #f1f5f9;
+    --descricao: rgba(255, 255, 255, 0.696);
     --fonte:"Lato", sans-serif;
 
 }
@@ -22,13 +23,6 @@ html, body{
     color:var(--texto);
     background-color: var(--fundo);
 }
-
-header{
-    position: fixed;
-    top: 0;
-    background: rgba(12, 18, 33, 0.8);
-}
-
 nav  span{
     color: var(--destaque);
 }
@@ -81,19 +75,42 @@ nav  span{
     width: 100%;
 }
 
-section{
+div{
     min-width: 96vh;
-    padding: 8rem;
+    padding: 70px 60px 60px 30px;
+}
+
+.cabecalho{
+    color:var(--texto);
 }
 
 .imagem{
     background-image: linear-gradient(90deg, rgba(10, 18, 35, 0.9), rgba(10, 18, 35, 0.237)), url(imagens/notebook-codigo.jpg);
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: right center;
     background-size: cover;
 }
 
-.cabecalho{
+.sub-titulo{
     color: var(--destaque);
-    font-size: bold
+    font-size: bold;
+    padding-bottom: 5px;
+
+}
+
+div > h1{
+    padding-bottom: 5px;
+    font-size: 40px;
+}
+
+div > p{
+    padding-bottom: 10px;
+}
+
+p.descricao{
+    color:var(--descricao);
+}
+
+h1 span{
+    color: var(--destaque);
 }
