@@ -3,6 +3,7 @@
 *{
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
@@ -113,4 +114,24 @@ p.descricao{
 
 h1 span{
     color: var(--destaque);
+}
+
+section{
+    min-width: 96vh;
+    padding: 70px 60px 60px 30px;
+}
+
+section > h2{
+    padding-bottom: 15px;
+
+}
+
+section span{
+    color: var(--destaque);
+}
+
+.disciplina{
+    width: 350px;
+    height: 200px;
+    border-radius: 30px;
 }
