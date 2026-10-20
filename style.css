@@ -1,137 +1,94 @@
 @charset "UTF-8";
 
-*{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
+:root {
+    --fundo: #061225;
+    --fundo-card: #0a1930;
+    --azul: #367dff;
+    --azul-claro: #6095ff;
+    --texto: #f2f5fc;
+    --texto-secundario: #c3ccdc;
+    --borda: rgba(117, 157, 220, 0.24);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-
-:root{
-    --fundo: #0f172a;
-    --destaque: #3b82f6;
-    --texto: #f1f5f9;
-    --descricao: rgba(255, 255, 255, 0.696);
-    --fonte:"Lato", sans-serif;
-
-}
-
-html, body{
-    min-width: 100vh;
-    min-height: 100vh;
-    font-family: var(--fonte);
-    color:var(--texto);
+body{
     background-color: var(--fundo);
+    color: var(--texto);
+    margin: 0;
+    width: 100%;
 }
-nav  span{
-    color: var(--destaque);
+
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 10px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    box-sizing: border-box;
+    background-color: var(--fundo-card);
+    z-index: 10;
+}
+
+.logo{
+    text-decoration: none;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.logo span{
+    color: var(--azul);
 }
 
 .navegacao{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    background: rgba(22, 36, 72, 0.345);
-    width: 100%;
-    z-index: 100;
-    padding: 0.6rem;
+    gap: 25px;
 }
 
-.logo{
-    font-size: 2em;
-    font-weight: bolder;
-    text-shadow: 0.5px 0.5px 3px rgba(0, 0, 0, 0.555);
-}
-
-.menu{
-    display: flex;
-    justify-content:right;
-    margin: 0px 50px;
-    list-style: none;
-    gap: 3rem;
-
-}
-
-.menu-link{
-    color: var(--texto);
+.navegacao a{
     text-decoration: none;
+    font-size: 16px;
+    color: var(--texto);
+
+}
+
+.navegacao a:hover{
+    color: #00aaff;
+}
+
+.inicio{
+    min-height: calc(100vh - 70px);
+    padding-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inicio-conteudo{
+    padding-left: 30px;
+}
+
+.subtitulo{
+    color: var(--azul);
+    font-size: 14px;
     font-weight: bold;
-    position: relative;
 }
 
-.menu-link::after{
-    content: '';
-    height: 2px;
-    width: 0;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background: linear-gradient(90deg, var(--destaque), var(--fundo));
-    transition: width 0.3s ease;
+section div > h1{
+    font-size: 48px;
+    margin-bottom: 20px;
 }
 
-.menu-link:hover::after{
-    width: 100%;
+.inicio-conteudo > h1 span{
+    color:var(--azul);
 }
 
-div{
-    min-width: 96vh;
-    padding: 70px 60px 60px 30px;
+.inicio-conteudo p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 600px;
 }
-
-.cabecalho{
-    color:var(--texto);
-}
-
-.imagem{
-    background-image: linear-gradient(90deg, rgba(10, 18, 35, 0.9), rgba(10, 18, 35, 0.237)), url(imagens/notebook-codigo.jpg);
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-size: cover;
-}
-
-.sub-titulo{
-    color: var(--destaque);
-    font-size: bold;
-    padding-bottom: 5px;
-
-}
-
-div > h1{
-    padding-bottom: 5px;
-    font-size: 40px;
-}
-
-div > p{
-    padding-bottom: 10px;
-}
-
-p.descricao{
-    color:var(--descricao);
-}
-
-h1 span{
-    color: var(--destaque);
-}
-
-section{
-    min-width: 96vh;
-    padding: 70px 60px 60px 30px;
-}
-
-section > h2{
-    padding-bottom: 15px;
-
-}
-
-section span{
-    color: var(--destaque);
-}
-
-.disciplina{
-    width: 350px;
-    height: 200px;
-    border-radius: 30px;
-}
+    
